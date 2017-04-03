@@ -44,7 +44,8 @@ open class ISTimeline: UIScrollView {
     
     open var bubbleColor:UIColor = .init(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
     open var titleColor:UIColor = .white
-    open var titleFontr:UIFont = UIFont.boldSystemFont(ofSize: 12.0)
+    open var titleFont:UIFont = UIFont.boldSystemFont(ofSize: 12.0)
+    open var descriptionFont:UIFont = UIFont.systemFont(ofSize: 10.0)
     open var descriptionColor:UIColor = .gray
     
     open var points:[ISPoint] = [] {
@@ -164,7 +165,7 @@ open class ISTimeline: UIScrollView {
     fileprivate func buildTitleLabel(_ index:Int) -> UILabel {
         let titleLabel = UILabel()
         titleLabel.text = points[index].title
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
+        titleLabel.font = titleFont
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.numberOfLines = 0
         titleLabel.preferredMaxLayoutWidth = calcWidth()
@@ -176,7 +177,7 @@ open class ISTimeline: UIScrollView {
         if (text != nil) {
             let descriptionLabel = UILabel()
             descriptionLabel.text = text
-            descriptionLabel.font = UIFont.systemFont(ofSize: 10.0)
+            descriptionLabel.font = descriptionFont
             descriptionLabel.lineBreakMode = .byWordWrapping
             descriptionLabel.numberOfLines = 0
             descriptionLabel.preferredMaxLayoutWidth = calcWidth()
