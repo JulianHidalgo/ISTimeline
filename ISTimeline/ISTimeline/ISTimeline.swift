@@ -44,6 +44,7 @@ open class ISTimeline: UIScrollView {
     
     open var bubbleColor:UIColor = .init(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
     open var titleColor:UIColor = .white
+    open var titleFontr:UIFont = UIFont.boldSystemFont(ofSize: 12.0)
     open var descriptionColor:UIColor = .gray
     
     open var points:[ISPoint] = [] {
