@@ -155,7 +155,7 @@ open class ISTimeline: UIScrollView {
             
             let titleImage = buildTitleImage(i)
             if let imageView = titleImage {
-                imageView.frame = CGRect(x: titleWidth + 25, y:  y + imageView.frame.height / 2 - 3, width: imageView.frame.width, height: imageView.frame.height)
+                imageView.frame = CGRect(x: titleWidth + 25, y: y + titleHeight / 2, width: imageView.frame.width, height: imageView.frame.height)
                 titleWidth = titleWidth + imageView.frame.width + 15
             }
             

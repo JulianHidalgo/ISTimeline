@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         let point = ISPoint(title: "06:46 AM", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.", pointColor: black, lineColor: black, touchUpInside: touchAction, fill: false)
         point.image = #imageLiteral(resourceName: "Mic")
+        point.titleFont = UIFont(name: "Avenir", size: 14)!
         let myPoints = [
             point,
             ISPoint(title: "07:00 AM", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.", pointColor: black, lineColor: black, touchUpInside: touchAction, fill: false),
