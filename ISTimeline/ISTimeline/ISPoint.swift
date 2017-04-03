@@ -12,6 +12,9 @@ open class ISPoint {
     
     open var title:String
     open var description:String?
+    open var titleFont: UIFont?
+    open var descriptionFont: UIFont?
+    open var image: UIImage?
     open var pointColor:UIColor
     open var lineColor:UIColor
     open var touchUpInside:Optional<(_ point:ISPoint) -> Void>
