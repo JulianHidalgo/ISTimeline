@@ -137,12 +137,6 @@ open class ISTimeline: UIScrollView {
                 titleWidth = maxTitleWidth
             }
             
-            let titleImage = buildTitleImage(i)
-            if let imageView = titleImage {
-                titleImage!.frame = CGRect(x: titleWidth + 25, y: 7, width: titleImage!.frame.width, height: titleImage!.frame.height)
-                titleWidth = titleWidth + titleImage!.frame.width + 15
-            }
-            
             let offset:CGFloat = bubbleArrows ? 13 : 5
             let bubbleRect = CGRect(
                 x: point.x + pointDiameter + lineWidth / 2 + offset,
@@ -157,6 +151,12 @@ open class ISTimeline: UIScrollView {
                     y: bubbleRect.origin.y + bubbleRect.height + 3,
                     width: calcWidth(),
                     height: descriptionLabel!.intrinsicContentSize.height)
+            }
+            
+            let titleImage = buildTitleImage(i)
+            if let imageView = titleImage {
+                imageView.frame = CGRect(x: titleWidth + 25, y:  y + imageView.frame.height / 2 - 3, width: imageView.frame.width, height: imageView.frame.height)
+                titleWidth = titleWidth + imageView.frame.width + 15
             }
             
             sections.append((point, bubbleRect, descriptionRect, titleLabel, titleImage: titleImage, descriptionLabel, points[i].pointColor.cgColor, points[i].lineColor.cgColor, points[i].fill))

@@ -13,6 +13,8 @@
 		8435EBD31D3669AE0077AF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8435EBD21D3669AE0077AF4E /* Assets.xcassets */; };
 		8435EBD61D3669AE0077AF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8435EBD41D3669AE0077AF4E /* LaunchScreen.storyboard */; };
 		8435EBF11D366BE00077AF4E /* ISTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8435EBEE1D366BBC0077AF4E /* ISTimeline.framework */; };
+		C91D0F3C1E92AB4E0016C9C0 /* ISTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8435EBEE1D366BBC0077AF4E /* ISTimeline.framework */; };
+		C91D0F3D1E92AB4E0016C9C0 /* ISTimeline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8435EBEE1D366BBC0077AF4E /* ISTimeline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,28 @@
 			remoteGlobalIDString = 845498981CDE6BAC0003C9D8;
 			remoteInfo = ISTimelineTests;
 		};
+		C91D0F3E1E92AB4E0016C9C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8435EBE81D366BBC0077AF4E /* ISTimeline.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8454988D1CDE6BAC0003C9D8;
+			remoteInfo = ISTimeline;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C91D0F401E92AB4E0016C9C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C91D0F3D1E92AB4E0016C9C0 /* ISTimeline.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8435EBC81D3669AE0077AF4E /* ISTimelineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISTimelineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8435EBF11D366BE00077AF4E /* ISTimeline.framework in Frameworks */,
+				C91D0F3C1E92AB4E0016C9C0 /* ISTimeline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +128,12 @@
 				8435EBC41D3669AE0077AF4E /* Sources */,
 				8435EBC51D3669AE0077AF4E /* Frameworks */,
 				8435EBC61D3669AE0077AF4E /* Resources */,
+				C91D0F401E92AB4E0016C9C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C91D0F3F1E92AB4E0016C9C0 /* PBXTargetDependency */,
 			);
 			name = ISTimelineDemo;
 			productName = ISTimelineDemo;
@@ -126,7 +152,7 @@
 				TargetAttributes = {
 					8435EBC71D3669AE0077AF4E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 92A27W7LV8;
+						DevelopmentTeam = PHAH7W3Q9J;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -196,6 +222,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C91D0F3F1E92AB4E0016C9C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ISTimeline;
+			targetProxy = C91D0F3E1E92AB4E0016C9C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8435EBCF1D3669AE0077AF4E /* Main.storyboard */ = {
@@ -308,8 +342,9 @@
 		8435EBDB1D3669AE0077AF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 92A27W7LV8;
+				DEVELOPMENT_TEAM = PHAH7W3Q9J;
 				INFOPLIST_FILE = ISTimelineDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.tripwire.istimelinedemo;
@@ -321,8 +356,9 @@
 		8435EBDC1D3669AE0077AF4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 92A27W7LV8;
+				DEVELOPMENT_TEAM = PHAH7W3Q9J;
 				INFOPLIST_FILE = ISTimelineDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.tripwire.istimelinedemo;
