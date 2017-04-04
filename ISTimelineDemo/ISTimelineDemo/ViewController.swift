@@ -24,7 +24,9 @@ class ViewController: UIViewController {
         }
         
         let point = ISPoint(title: "06:46 AM", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.", pointColor: black, lineColor: black, touchUpInside: touchAction, fill: false)
-        point.image = #imageLiteral(resourceName: "Mic")
+        point.titleImage = #imageLiteral(resourceName: "Mic")
+        point.bubbleColor = UIColor.gray
+        point.titleColor = UIColor.white
         point.titleFont = UIFont(name: "Avenir", size: 14)!
         let myPoints = [
             point,
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
         ]
         
         timeline.contentInset = UIEdgeInsetsMake(20.0, 20.0, 20.0, 20.0)
+        timeline.titleColor = .black
         timeline.points = myPoints
     }
 }

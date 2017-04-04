@@ -10,11 +10,14 @@ import UIKit
 
 open class ISPoint {
     
+    open var bubbleColor: UIColor?
     open var title:String
-    open var description:String?
+    open var titleColor: UIColor?
     open var titleFont: UIFont?
+    open var titleImage: UIImage?
+    open var description:String?
+    open var descriptionColor: UIColor?
     open var descriptionFont: UIFont?
-    open var image: UIImage?
     open var pointColor:UIColor
     open var lineColor:UIColor
     open var touchUpInside:Optional<(_ point:ISPoint) -> Void>
